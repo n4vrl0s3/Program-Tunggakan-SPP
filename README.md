@@ -7,13 +7,53 @@
 
 </div>
 
-# Program Tunggakan SPP
-Repositori ini bertujuan untuk memberikan titik awal yang komprehensif untuk memahami dan mengimplementasikan sistem pelacakan tunggakan SPP (Sumbangan Pembinaan Pendidikan). Program ini diimplementasikan dalam bahasa Python dan cocok sebagai pengenalan manajemen dan pelacakan pembayaran SPP untuk siswa, yang sesuai untuk pemrogram pemula dan menengah.
+# SPP Arrears Program
+
+This repository aims to provide a comprehensive starting point for understanding and implementing an SPP (Education Development Contribution) arrears tracking system. This program is implemented in Python and is suitable as an introduction to managing and tracking SPP payments for students, suitable for beginner and intermediate programmers.
 
 <hr><br>
 
 ## Purpose of This Repository
-Repositori ini bertujuan untuk memberikan panduan lengkap dalam memahami dan mengimplementasikan sistem pelacakan tunggakan SPP (Sumbangan Pembinaan Pendidikan). Program ini menggunakan bahasa Python dan dirancang untuk membantu pengelola sekolah dalam memantau dan mengelola pembayaran SPP siswa. Dengan menggunakan program ini, pengguna dapat dengan mudah mencatat, memeriksa, dan memperbarui status pembayaran SPP siswa, sehingga cocok untuk pemrogram pemula dan menengah yang ingin mempelajari manajemen data dan aplikasi praktis dalam pendidikan.
+
+This repository aims to provide a complete guide to understanding and implementing an SPP (Education Development Contribution) arrears tracking system. This program uses Python and is designed to help school administrators monitor and manage student SPP payments. By using this program, users can easily record, check, and update the status of student SPP payments, making it suitable for beginner and intermediate programmers who want to learn data management and practical applications in education.
+
+<hr><br>
+
+## Features
+
+- Record student SPP payments
+- Check payment status
+- Update payment status
+- SPP arrears report
+
+<hr><br>
+
+## Technologies Used
+
+- Python
+
+<hr><br>
+
+## Steps to Run
+
+1. Clone this repository
+   ```bash
+   git clone https://github.com/guanshiyin28/Program-Tunggakan-SPP.git
+   ```
+2. Navigate to the project directory
+   ```bash
+   cd Program-Tunggakan-SPP
+   ```
+3. Run the program
+   ```bash
+   python main.py
+   ```
+
+<hr><br>
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <hr><br>
 
