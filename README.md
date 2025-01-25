@@ -1,12 +1,3 @@
-<div align=center>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=100:FF0000,20:F0F0F0&section=footer&reversal=false&textBg=false&fontAlignY=50&descAlign=48&descAlignY=59"/>
-
-![Jane Doe Banner](https://github.com/user-attachments/assets/6dce4a9a-c124-413d-816b-a0ea878a6cd9)
-<img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=20:FF0000,100:F0F0F0&section=header&reversal=false&textBg=false&fontAlignY=50&descAlign=48&descAlignY=59"/>
-
-</div>
-
 # SPP Arrears Program
 
 This repository aims to provide a comprehensive starting point for understanding and implementing an SPP (Education Development Contribution) arrears tracking system. This program is implemented in Python and is suitable as an introduction to managing and tracking SPP payments for students, suitable for beginner and intermediate programmers.
@@ -19,35 +10,59 @@ This repository aims to provide a complete guide to understanding and implementi
 
 <hr><br>
 
-## Demo
+## Demonstration
 
 Here is a simple demonstration of how to use the main functions in the program:
 
 ```python
 # main.py
 
-def record_payment(student_id, amount):
-    # Function to record a payment
-    pass
+def read_pembayaran(filename):
+    pembayaran = []
+    with open(filename, 'r') as file:
+        for line in file:
+            tanggal, semester, jumlah = line.strip().split(', ')
+            pembayaran.append({
+                'tanggal': tanggal,
+                'semester': semester,
+                'jumlah': int(jumlah),
+            })
+    return pembayaran
 
-def check_payment_status(student_id):
-    # Function to check payment status
-    pass
+def hitung_total_pembayaran(pembayaran):
+    total = 0
+    for bayar in pembayaran:
+        total += bayar['jumlah']
+    return total
 
-def update_payment_status(student_id, status):
-    # Function to update payment status
-    pass
+def cek_tertunggak(pembayaran):
+    semester_terbayar = [bayar['semester'] for bayar in pembayaran]
+    for i in range(1, 13): # Semester 1 hingga 13
+        if f"Semester {i}" not in semester_terbayar:
+            return i
+    return None
 
-def generate_arrears_report():
-    # Function to generate arrears report
-    pass
+def ringkasan_pembayaran(filename):
+    pembayaran = read_pembayaran(filename)
+    total = hitung_total_pembayaran(pembayaran)
+    tertunggak = cek_tertunggak(pembayaran)
 
-# Example usage
-record_payment('student_01', 100)
-status = check_payment_status('student_01')
-update_payment_status('student_01', 'Paid')
-report = generate_arrears_report()
-print(report)
+    print(f"Total Pembayaran untuk {filename}: Rp{total}")
+    if tertunggak:
+        print(f"Tertunggak: Semester {tertunggak}")
+    else:
+        print("Tertunggak: Tidak ada")
+
+def main():
+    NIM = input("Masukkan NIM Anda: ")
+    filename = f"{NIM}_pembayaran.txt"
+    if os.path.exists(filename):
+        ringkasan_pembayaran(filename)
+    else:
+        print(f"File '{filename}' tidak ditemukan")
+
+if __name__ == "__main__":
+    main()
 ```
 
 <hr><br>
@@ -96,12 +111,12 @@ print(report)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for details.
 
 <hr><br>
 
 <div align="center">
-  <a href="https://www.instagram.com/guanshiyin_/">
-     <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=100:FF0000,20:F0F0F0&section=footer&reversal=false&textBg=false&fontAlignY=50&descAlign=48&descAlignY=59"/>
-  </a>
+   <a href="https://www.instagram.com/guanshiyin_/">
+      <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=100:393E46,20:F7F7F7&section=footer&reversal=false&textBg=false&fontAlignY=50&descAlign=48&descAlignY=59"/>
+   </a>
 </div>
