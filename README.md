@@ -1,4 +1,4 @@
-# SPP Arrears Program
+# Program Tunggakan SPP
 
 This repository aims to provide a comprehensive starting point for understanding and implementing an SPP (Education Development Contribution) arrears tracking system. This program is implemented in Python and is suitable as an introduction to managing and tracking SPP payments for students, suitable for beginner and intermediate programmers.
 
