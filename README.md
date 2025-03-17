@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/guanshiyin28/Program-Tunggakan-SPP.git
+   git clone https://github.com/n4vrl0s3/Program-Tunggakan-SPP.git
    ```
 2. **Navigate to the project directory**
    ```bash
@@ -116,7 +116,7 @@ This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE
 <hr><br>
 
 <div align="center">
-   <a href="https://www.instagram.com/guanshiyin_/">
+   <a href="https://www.instagram.com/n4vrl0s3/">
       <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=100:393E46,20:F7F7F7&section=footer&reversal=false&textBg=false&fontAlignY=50&descAlign=48&descAlignY=59"/>
    </a>
 </div>
